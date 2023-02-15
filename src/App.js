@@ -31,7 +31,7 @@ function App() {
   
   
   return (
-    <div className="app">
+    <div className="app"> 
       <h1>Readings</h1>
       <BookList list={books} onDelete={deletebyId} onEdit={editbyId}></BookList>
       {/* <bookEdit onDelete={deletebyId}></bookEdit> */}
