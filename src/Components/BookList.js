@@ -1,9 +1,10 @@
 import React from 'react'
+import useContextBook from './usecontextbook'
 import BookShow from './BookShow'
-function BookList({list,onDelete,onEdit}) {
-    const renderedbooks=list.map((book)=>{
-        const {id,title}=book
-        return(<BookShow key={id} id={id} onEdit={onEdit} onDelete={onDelete} title={title}></BookShow>)
+function BookList() {
+    const {books}=useContextBook()
+    const renderedbooks=books.map((book)=>{
+        return(<BookShow key={book.id} book={book}  ></BookShow>)
     })
     return (
     <div className='book-list'>

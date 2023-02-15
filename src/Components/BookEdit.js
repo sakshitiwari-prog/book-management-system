@@ -1,13 +1,14 @@
 import React,{useState} from 'react'
+import useContextBook from './usecontextbook'
 
-function BookEdit({handlesubmit,title,id}) {
-    
-    const [tit, setTit] = useState(title)
+function BookEdit({handlesubmit,book}) {
+    const {editbyId}=useContextBook()
+    const [tit, setTit] = useState(book.title)
     
     function save(e){
         e.preventDefault()
-        handlesubmit(id,tit)
-        
+        handlesubmit()
+        editbyId(book.id,tit)        
     }
     function change(e){
         setTit(e.target.value)
