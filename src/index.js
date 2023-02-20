@@ -4,13 +4,13 @@ import './index.css';
 import './ind.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {Provider} from './Context/Books';
+import {BookProvider} from './Context/Books';
 // import index
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Provider>
+  <BookProvider>
     <App />
-  </Provider>
+  </BookProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

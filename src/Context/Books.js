@@ -1,6 +1,10 @@
-import { createContext, useState } from "react";
-function Provider({ children }) {
+import { createContext, useState ,useEffect} from "react";
+function BookProvider({ children }) {
     const [books, setBooks] = useState([])
+    useEffect(() => {
+    console.log(books)
+    }, [])
+    
     const deletebyId = (id) => {
         const updatelist = books.filter((book) => {
             return book.id !== id
@@ -32,5 +36,5 @@ function Provider({ children }) {
     </BookContext.Provider>
 }
 const BookContext = createContext()
-export { Provider }
+export { BookProvider }
 export default BookContext
