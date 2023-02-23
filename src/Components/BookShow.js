@@ -22,7 +22,7 @@ function BookShow({book}) {
     }
     return (
     <div className='book-show'>
-        <img src={`https://picsum.photos/seed/${book.id}/100/100`} alt="book" />
+        <img src={`https://picsum.photos/seed/${book.id}/20/20`} alt="book" />
         {content}
         <div className='actions'>
             <button className='edit'onClick={handleEditClick}>edit</button>
